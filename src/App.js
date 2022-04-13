@@ -1,12 +1,10 @@
 import './App.css'
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>The DuirPedia</h1>
-        <img className="sw-logo" src="/sw-logo.png" alt="star wars logo" />
-      </header>
+      <Header title="the duirpedia" />
     </div>
   )
 }
