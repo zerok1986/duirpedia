@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <Header title="the duirpedia" />
+      <section className="container"></section>
     </div>
   )
 }

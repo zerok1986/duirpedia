@@ -1,11 +1,11 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .App-header {
   font-family: SFDistantGalaxy, sans-serif;
   background-color: black;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +13,25 @@
   color: #ffe818;
 }
 
+.title {
+  padding: 10px;
+  margin: 10px;
+}
+
 .sw-logo {
-  height: 30vmin
+  height: 20vmin;
+  padding-bottom: 10px;
+}
+
+.container {
+  border: 3px solid #ffe818;
+  border-radius: 10px;
+  height: 100vh;
+  padding: 1fr;
+  background-color: grey;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
