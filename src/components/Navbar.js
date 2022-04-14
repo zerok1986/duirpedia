@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useState } from 'react'
 import { Paper } from '@mui/material'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
@@ -8,13 +8,17 @@ import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined
 import AccessibilityNewOutlinedIcon from '@mui/icons-material/AccessibilityNewOutlined'
 import RocketOutlinedIcon from '@mui/icons-material/RocketOutlined'
 import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined'
+import { Link } from 'react-router-dom'
 
 export default function LabelBottomNavigation() {
-  const [value, setValue] = React.useState('recents')
+  const pathname = window.location.pathname
+  const [value, setValue] = useState(pathname)
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
+
+  console.log(value)
 
   return (
     <Paper
@@ -27,45 +31,57 @@ export default function LabelBottomNavigation() {
       elevation={3}
     >
       <BottomNavigation
-        showLabels
+        showLabels={true}
         sx={{ bgcolor: 'black', width: '100%' }}
         value={value}
         onChange={handleChange}
       >
         <BottomNavigationAction
+          component={Link}
+          to="/films"
           sx={{ color: '#ffe818' }}
           label="Films"
-          value="films"
+          value="/films"
           icon={<TheatersOutlinedIcon sx={{ color: '#ffe818' }} />}
         />
         <BottomNavigationAction
+          component={Link}
+          to="/people"
           sx={{ color: '#ffe818' }}
           label="People"
-          value="people"
+          value="/people"
           icon={<PeopleAltOutlinedIcon sx={{ color: '#ffe818' }} />}
         />
         <BottomNavigationAction
+          component={Link}
+          to="/planets"
           sx={{ color: '#ffe818' }}
           label="Planets"
-          value="planets"
+          value="/planets"
           icon={<TravelExploreOutlinedIcon sx={{ color: '#ffe818' }} />}
         />
         <BottomNavigationAction
+          component={Link}
+          to="/spieces"
           sx={{ color: '#ffe818' }}
           label="Spieces"
-          value="spieces"
+          value="/spieces"
           icon={<AccessibilityNewOutlinedIcon sx={{ color: '#ffe818' }} />}
         />
         <BottomNavigationAction
+          component={Link}
+          to="/starships"
           sx={{ color: '#ffe818' }}
           label="Starships"
-          value="starships"
+          value="/starships"
           icon={<RocketOutlinedIcon sx={{ color: '#ffe818' }} />}
         />
         <BottomNavigationAction
+          component={Link}
+          to="/vehicles"
           sx={{ color: '#ffe818' }}
           label="Vehicles"
-          value="vehicles"
+          value="/vehicles"
           icon={<DirectionsCarFilledOutlinedIcon sx={{ color: '#ffe818' }} />}
         />
       </BottomNavigation>
