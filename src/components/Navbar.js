@@ -31,58 +31,58 @@ export default function LabelBottomNavigation() {
       elevation={3}
     >
       <BottomNavigation
+        onChange={handleChange}
         showLabels={true}
         sx={{ bgcolor: 'black', width: '100%' }}
         value={value}
-        onChange={handleChange}
       >
         <BottomNavigationAction
           component={Link}
-          to="/films"
-          sx={{ color: '#ffe818' }}
-          label="Films"
-          value="/films"
           icon={<TheatersOutlinedIcon sx={{ color: '#ffe818' }} />}
+          label="Films"
+          sx={{ color: '#ffe818' }}
+          to="/films"
+          value="/films"
         />
         <BottomNavigationAction
           component={Link}
-          to="/people"
-          sx={{ color: '#ffe818' }}
-          label="People"
-          value="/people"
           icon={<PeopleAltOutlinedIcon sx={{ color: '#ffe818' }} />}
+          label="People"
+          sx={{ color: '#ffe818' }}
+          to="/people"
+          value="/people"
         />
         <BottomNavigationAction
           component={Link}
-          to="/planets"
-          sx={{ color: '#ffe818' }}
-          label="Planets"
-          value="/planets"
           icon={<TravelExploreOutlinedIcon sx={{ color: '#ffe818' }} />}
+          label="Planets"
+          sx={{ color: '#ffe818' }}
+          to="/planets"
+          value="/planets"
         />
         <BottomNavigationAction
           component={Link}
-          to="/spieces"
-          sx={{ color: '#ffe818' }}
-          label="Spieces"
-          value="/spieces"
           icon={<AccessibilityNewOutlinedIcon sx={{ color: '#ffe818' }} />}
+          label="Spieces"
+          sx={{ color: '#ffe818' }}
+          to="/spieces"
+          value="/spieces"
         />
         <BottomNavigationAction
           component={Link}
-          to="/starships"
-          sx={{ color: '#ffe818' }}
-          label="Starships"
-          value="/starships"
           icon={<RocketOutlinedIcon sx={{ color: '#ffe818' }} />}
+          label="Starships"
+          sx={{ color: '#ffe818' }}
+          to="/starships"
+          value="/starships"
         />
         <BottomNavigationAction
           component={Link}
-          to="/vehicles"
-          sx={{ color: '#ffe818' }}
-          label="Vehicles"
-          value="/vehicles"
           icon={<DirectionsCarFilledOutlinedIcon sx={{ color: '#ffe818' }} />}
+          label="Vehicles"
+          sx={{ color: '#ffe818' }}
+          to="/vehicles"
+          value="/vehicles"
         />
       </BottomNavigation>
     </Paper>
