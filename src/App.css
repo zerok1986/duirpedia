@@ -4,6 +4,7 @@
 }
 
 .App-header {
+  background-color: black;
   align-items: center;
   background-color: black;
   color: #ffe818;
@@ -25,6 +26,7 @@
 
 .container {
   background-color: grey;
+  margin-bottom: 56px;
   border-radius: 10px;
   border: 3px solid #ffe818;
   display: grid;
@@ -32,6 +34,6 @@
   grid-row-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  height: 100vh;
-  padding: 1fr;
+  height: 100vw;
+  margin: 56px;
 }
