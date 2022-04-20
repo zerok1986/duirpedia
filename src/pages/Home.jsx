@@ -1,12 +1,15 @@
 import React from 'react'
 
 export const Home = ({ data }) => {
-  console.log(Object.keys(data))
+  console.log(data)
+  const swData = Object.entries(data)
   return (
     <div>
       <ul>
-        {Object.keys(data).map((key) => (
-          <li key={key}>{key}</li>
+        {swData.map((item) => (
+          <li key={item[0]}>
+            {item[0]}: {item[1]}
+          </li>
         ))}
       </ul>
     </div>
