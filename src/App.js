@@ -10,19 +10,17 @@ import { Planets } from './pages/Planets'
 import { Spieces } from './pages/Spieces'
 import { Starships } from './pages/Starships'
 import { Vehicles } from './pages/Vehicles'
-import getData from './utils/ApiHandler'
+import SWAPIService from './services/ApiHandler'
+
 
 function App() {
+  const category = window.location.pathname.substring(1)
   const [data, setData] = useState({})
 
   useEffect(() => {
-    let mounted = true
-    getData().then((data) => {
-      if (mounted) {
-        setData(data)
-      }
-    })
-    return () => (mounted = false)
+    SWAPIService
+      .getRoot()
+      .then(data => console.log(data))
   }, [])
 
   return (
@@ -30,13 +28,13 @@ function App() {
       <Header title="the duirpedia" />
       <section className="container">
         <Routes>
-          <Route path="/" element={<Home data={data} />} />
-          <Route path="Films" element={<Films />} />
-          <Route path="People" element={<People />} />
-          <Route path="Planets" element={<Planets />} />
-          <Route path="Spieces" element={<Spieces />} />
-          <Route path="Starships" element={<Starships />} />
-          <Route path="Vehicles" element={<Vehicles />} />
+          <Route path="/" element={<Home />} />
+          <Route path="films" element={<Films />} />
+          <Route path="people" element={<People />} />
+          <Route path="planets" element={<Planets />} />
+          <Route path="spieces" element={<Spieces />} />
+          <Route path="starships" element={<Starships />} />
+          <Route path="vehicles" element={<Vehicles />} />
         </Routes>
       </section>
       <Navbar />

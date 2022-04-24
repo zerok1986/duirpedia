@@ -18,8 +18,6 @@ export default function LabelBottomNavigation() {
     setValue(newValue)
   }
 
-  console.log(value)
-
   return (
     <Paper
       sx={{
